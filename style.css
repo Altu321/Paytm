@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+}
+a{
+  color: currentColor;
+  text-decoration: none;
+}
+header {
+  height: 90px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logContainer {
+  width: 180px;
+}
+.logContainer img {
+  width: 100%;
+}
+
+.nav {
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+.nav li {
+  padding-right: 30px;
+}
+.signBtn {
+  display: flex;
+  align-items: center;
+  background-color: #00baf2;
+  height: 38px;
+  border-radius: 50px;
+  padding: 5px;
+}
+.signBtn h4 {
+  padding: 10px;
+  margin: 0;
+  color: white;
+  font-weight: 500;
+}
+.signIcon {
+  width: 33px;
+  display: flex;
+  align-items: center;
+}
+.signIcon img {
+  width: 100%;
+}
+/******sub nav******/
+.nav-list {
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+}
+.sub_Nav {
+  position: absolute;
+  display: none;
+  padding-top: 15px;
+  
+}
+.nav-list:hover .sub_Nav,
+.nav-list:focus .sub_Nav {
+  display: block;
+}
+.sub_Nav ul {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  /* width: calc(100% + 10px); */
+  /* padding: 10px; */
+  margin-left: -10px;
+  background-color: white;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  min-height: 250px;
+  /* justify-content: space-around; */
+
+
+}
+.sub_Nav ul li{
+ padding: 15px 20px 20px 20px;
+ font-size: 1rem;
+ font-weight: 400;  
+ display: flex;
+ justify-content: space-between;
+ min-width: 210px;
+
+}
+.iconNext{
+    position: relative;
+    padding-right: 7px;
+    color: #707070;
+    transition: content 2s;
+}
+.iconNext::after{
+    content: "\f105";
+    position: absolute;
+    font-family: "FontAwesome";
+    transition: content 2s;
+}
+.sub_Nav ul li:hover .iconNext::after{
+    content: "\f061";
+    position: absolute;
+    font-family: "FontAwesome";
+
+}
+.sub_Nav_Sub{
+    position:absolute;
+    left:calc(100% + 5px);
+    top: 15px;
+    display: none;
+    bottom: 0;
+    
+    
+}
+.sub_Nav ul li:hover .sub_Nav_Sub{
+  display:block
+}
+.sub_Nav_Sub ul li{
+  white-space: nowrap ;
+}
+.sub-nav-title{
+  padding-right: 30px;
+}
+.sub_Nav_Sub_sub{
+  position:absolute;
+  left:calc(100% + 5px);
+  top: 0px;
+  display: none;
+
+}
+.sub_Nav_Sub ul li:hover .sub_Nav_Sub_sub{
+  display: block;
+}
